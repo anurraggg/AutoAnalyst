@@ -53,7 +53,7 @@ except Exception as e:
 
 # Sidebar
 st.sidebar.header("🔍 Filters")
-min_views = st.sidebar.slider("Minimum Views", 0, int(df['views'].max()), 0)
+min_views = st.sidebar.number_input("Minimum Views", min_value=0, max_value=int(df['views'].max()), value=0, step=1000)
 filtered_df = df[df['views'] >= min_views]
 
 st.sidebar.markdown("---")

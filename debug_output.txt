@@ -1,0 +1,29 @@
+COLUMNS:
+['URL', 'Type', 'Username', 'Collaborator', 'likes', 'comments', 'views', 'Username_Followers', 'Username_Following', 'Collaborator_Followers', 'Collaborator_Following']
+
+DTYPES:
+URL                        object
+Type                       object
+Username                   object
+Collaborator               object
+likes                     float64
+comments                  float64
+views                     float64
+Username_Followers         object
+Username_Following        float64
+Collaborator_Followers     object
+Collaborator_Following    float64
+dtype: object
+
+HEAD (10):
+                                                                                                 URL       Type         Username         Collaborator    likes  comments       views Username_Followers  Username_Following Collaborator_Followers  Collaborator_Following
+0                                  https://www.instagram.com/reel/DM4_qshB3le/?igsh=aDdkcWxndG40Z2Qx  Reel/Post    friesandvogue                  NaN    224.0       5.0      7505.0              34.8K               709.0                    NaN                     NaN
+1                                                           https://www.instagram.com/p/DMsYnNeJnSp/  Reel/Post    tiyaslookbook                  NaN    498.0      17.0     14600.0              30.3K               603.0                    NaN                     NaN
+2                          https://www.instagram.com/reel/DM5F3Vzq6TN/?igsh=MWZ2dzZxb2xmanM5ZA%3D%3D  Reel/Post    rashi_varaiya                  NaN      9.0       0.0     40300.0              39.1K               780.0                    NaN                     NaN
+3                                  https://www.instagram.com/reel/DM5WV8-Sg2v/?igsh=dzZtaWEzYjZjZjN5  Reel/Post     vidhi.kediya                  NaN    113.0       2.0     13500.0              58.6K              1252.0                    NaN                     NaN
+4                                  https://www.instagram.com/reel/DM7mxJHJH0q/?igsh=NXF6MTM5NGtwdmw4  Reel/Post    nadeeshbhambi                  NaN   5777.0     112.0     18100.0              36.7K              2022.0                    NaN                     NaN
+5                                  https://www.instagram.com/reel/DM7uMlcoJwj/?igsh=enJ0cW5jNXI5cjAw  Reel/Post        vorasahab                  NaN  24200.0     211.0    121000.0               190K              4184.0                    NaN                     NaN
+6                          https://www.instagram.com/reel/DMh8usYM8Gj/?igsh=MTFzM2NuOGR4bjJucw%3D%3D  Reel/Post  barkhasingh0308    fabellechocolates  33000.0     659.0  15200000.0               2.7M              1802.0                  60.8K                    13.0
+7                                  https://www.instagram.com/reel/DMmWgk-I1WK/?igsh=djM0dGYzMmQ4MW1u  Reel/Post           alayaf    fabellechocolates  22000.0      70.0  22400000.0               2.1M              1095.0                  60.8K                    13.0
+8                          https://www.instagram.com/reel/DMu6KPKyzdy/?igsh=MTl2OGgxaXhhaGtqZA%3D%3D  Reel/Post     pavailgulati    fabellechocolates   5902.0      30.0  19300000.0               271K               376.0                  60.8K                    13.0
+9  https://www.instagram.com/reel/DFXl767SXo2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D  Reel/Post     gunjanshouts  happytummy.wellness      3.0       0.0    367000.0                 1M               827.0                   3605                     3.0

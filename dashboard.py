@@ -101,7 +101,10 @@ with tab2:
     st.subheader("Engagement Analysis: Views vs Likes")
     
     # Scatter Plot
-    fig3 = px.scatter(filtered_df, x='views', y='likes', size='comments', hover_data=['Username', 'URL'],
+    # Ensure 'comments' are non-negative and fill NaNs for size
+    filtered_df['comments_size'] = filtered_df['comments'].fillna(0).clip(lower=0)
+    
+    fig3 = px.scatter(filtered_df, x='views', y='likes', size='comments_size', hover_data=['Username', 'URL'],
                       color='views', color_continuous_scale='Plasma', log_x=True, log_y=True)
     fig3.update_layout(title="Views vs Likes (Size = Comments)", xaxis_title="Views (Log Scale)", yaxis_title="Likes (Log Scale)")
     st.plotly_chart(fig3, use_container_width=True)

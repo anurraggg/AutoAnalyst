@@ -10,27 +10,81 @@ st.set_page_config(page_title="Instagram Analytics Dashboard", layout="wide", pa
 # Custom CSS for "Premium" feel
 st.markdown("""
 <style>
-    .stMetric {
-        background-color: #262730;
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid #333;
+    /* Import Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    html, body, [class*="css"] {
+        font-family: 'Inter', sans-serif;
     }
+
+    /* Gradient Background */
+    .stApp {
+        background: linear-gradient(135deg, #0E1117 0%, #1A1C24 100%);
+    }
+
+    /* Sidebar Styling */
+    [data-testid="stSidebar"] {
+        background-color: #0E1117;
+        border-right: 1px solid #333;
+    }
+
+    /* Metric Cards (Glassmorphism) */
+    .stMetric {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+    .stMetric:hover {
+        transform: translateY(-5px);
+        border-color: #E1306C;
+    }
+
+    /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 10px;
+        gap: 20px;
+        background-color: transparent;
     }
     .stTabs [data-baseweb="tab"] {
         height: 50px;
         white-space: pre-wrap;
-        background-color: #0E1117;
-        border-radius: 4px 4px 0px 0px;
+        background-color: transparent;
+        border-radius: 0px;
         gap: 1px;
         padding-top: 10px;
         padding-bottom: 10px;
+        color: #888;
+        font-weight: 600;
+        border: none;
     }
     .stTabs [aria-selected="true"] {
-        background-color: #262730;
-        border-bottom: 2px solid #E1306C;
+        background-color: transparent;
+        color: #E1306C;
+        border-bottom: 3px solid #E1306C;
+    }
+
+    /* Buttons */
+    .stButton > button {
+        background: linear-gradient(45deg, #E1306C, #C13584);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    .stButton > button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4);
+    }
+    
+    /* Headers */
+    h1, h2, h3 {
+        color: #FAFAFA;
+        font-weight: 700;
     }
 </style>
 """, unsafe_allow_html=True)

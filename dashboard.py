@@ -17,35 +17,50 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
 
-    /* Force Dark Background & Gradient */
+    /* Main Background - Target the root container */
     .stApp {
-        background: linear-gradient(135deg, #0E1117 0%, #1A1C24 100%) !important;
+        background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+        background-attachment: fixed !important;
+    }
+    
+    /* Alternative Main Background Selector */
+    [data-testid="stAppViewContainer"] {
+        background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+        background-attachment: fixed !important;
     }
 
     /* Sidebar Styling */
     [data-testid="stSidebar"] {
-        background-color: #0E1117 !important;
-        border-right: 1px solid #333 !important;
+        background-color: rgba(15, 12, 41, 0.95) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
     /* Metric Cards (Glassmorphism) */
-    .stMetric {
+    div[data-testid="stMetric"], .stMetric {
         background: rgba(255, 255, 255, 0.05) !important;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         padding: 20px !important;
         border-radius: 15px !important;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-        transition: transform 0.2s;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
     }
-    .stMetric:hover {
-        transform: translateY(-5px);
+    
+    div[data-testid="stMetric"]:hover, .stMetric:hover {
         border-color: #E1306C !important;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
     }
     
     /* Metric Value Color */
     [data-testid="stMetricValue"] {
         color: #E1306C !important;
+        font-size: 2rem !important;
+    }
+    
+    /* Metric Label Color */
+    [data-testid="stMetricLabel"] {
+        color: #e0e0e0 !important;
     }
 
     /* Tabs Styling */
@@ -61,7 +76,7 @@ st.markdown("""
         gap: 1px;
         padding-top: 10px;
         padding-bottom: 10px;
-        color: #888 !important;
+        color: #aaa !important;
         font-weight: 600;
         border: none !important;
     }
@@ -79,17 +94,26 @@ st.markdown("""
         border-radius: 25px !important;
         padding: 10px 25px !important;
         font-weight: bold !important;
-        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3) !important;
     }
     .stButton > button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4) !important;
+        transform: scale(1.02);
+        box-shadow: 0 6px 20px rgba(225, 48, 108, 0.5) !important;
     }
     
     /* Headers */
     h1, h2, h3 {
         color: #FAFAFA !important;
         font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    /* Plotly Chart Container */
+    .stPlotlyChart {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 15px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
     }
 </style>
 """, unsafe_allow_html=True)

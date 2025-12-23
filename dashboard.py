@@ -17,73 +17,78 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
 
-    /* Gradient Background */
+    /* Force Dark Background & Gradient */
     .stApp {
-        background: linear-gradient(135deg, #0E1117 0%, #1A1C24 100%);
+        background: linear-gradient(135deg, #0E1117 0%, #1A1C24 100%) !important;
     }
 
     /* Sidebar Styling */
     [data-testid="stSidebar"] {
-        background-color: #0E1117;
-        border-right: 1px solid #333;
+        background-color: #0E1117 !important;
+        border-right: 1px solid #333 !important;
     }
 
     /* Metric Cards (Glassmorphism) */
     .stMetric {
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.05) !important;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding: 20px !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
         transition: transform 0.2s;
     }
     .stMetric:hover {
         transform: translateY(-5px);
-        border-color: #E1306C;
+        border-color: #E1306C !important;
+    }
+    
+    /* Metric Value Color */
+    [data-testid="stMetricValue"] {
+        color: #E1306C !important;
     }
 
     /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {
         gap: 20px;
-        background-color: transparent;
+        background-color: transparent !important;
     }
     .stTabs [data-baseweb="tab"] {
         height: 50px;
         white-space: pre-wrap;
-        background-color: transparent;
+        background-color: transparent !important;
         border-radius: 0px;
         gap: 1px;
         padding-top: 10px;
         padding-bottom: 10px;
-        color: #888;
+        color: #888 !important;
         font-weight: 600;
-        border: none;
+        border: none !important;
     }
     .stTabs [aria-selected="true"] {
-        background-color: transparent;
-        color: #E1306C;
-        border-bottom: 3px solid #E1306C;
+        background-color: transparent !important;
+        color: #E1306C !important;
+        border-bottom: 3px solid #E1306C !important;
     }
 
     /* Buttons */
     .stButton > button {
-        background: linear-gradient(45deg, #E1306C, #C13584);
-        color: white;
-        border: none;
-        border-radius: 25px;
-        padding: 10px 25px;
-        font-weight: bold;
-        transition: all 0.3s ease;
+        background: linear-gradient(45deg, #E1306C, #C13584) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 25px !important;
+        padding: 10px 25px !important;
+        font-weight: bold !important;
+        transition: all 0.3s ease !important;
     }
     .stButton > button:hover {
         transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4);
+        box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4) !important;
     }
     
     /* Headers */
     h1, h2, h3 {
-        color: #FAFAFA;
+        color: #FAFAFA !important;
         font-weight: 700;
     }
 </style>
